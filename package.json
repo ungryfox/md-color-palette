@@ -13,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/ungryfox/md-color-palette/issues"
   },
-  "homepage": "https://github.com/ungryfox/md-color-palette#readme"
+  "homepage": "https://github.com/ungryfox/md-color-palette#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
