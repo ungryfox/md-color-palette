@@ -1,0 +1,9 @@
+{
+  "name": "md-color-palette",
+  "description": "",
+  "license": "MIT",
+  "homepage": "https://github.com/ungryfox/md-color-palette",
+  "ignore": [
+    "**/.*"
+  ]
+}
