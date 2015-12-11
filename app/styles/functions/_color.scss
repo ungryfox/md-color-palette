@@ -4,5 +4,11 @@
 
 
 @function color($color-name, $tone: 500) {
-  @return map-get(map-get($colors, $color-name), #{$tone});
+  $group: map-get($colors, $color-name);
+
+  @if type-of($group) == map {
+    @return map-get($group, #{$tone});
+  } @else {
+    @return $group;
+  }
 }

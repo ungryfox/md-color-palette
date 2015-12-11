@@ -6,13 +6,23 @@
 @mixin group($name) {
   $group: map-get($colors, $name);
 
-  @each $color-name, $color-code in $group {
-    .#{$md-css-prefix}-#{$md-text-prefix}-#{$name}-#{$color-name} {
-      color: #{$color-code};
+  @if type-of($group) == map {
+    @each $color-name, $color-code in $group {
+      .#{$md-css-prefix}-#{$md-text-prefix}-#{$name}-#{$color-name} {
+        color: #{$color-code};
+      }
+
+      .#{$md-css-prefix}-#{$md-bg-prefix}-#{$name}-#{$color-name} {
+        background-color: #{$color-code};
+      }
+    }
+  } @else {
+    .#{$md-css-prefix}-#{$md-text-prefix}-#{$name} {
+      color: #{$group};
     }
 
-    .#{$md-css-prefix}-#{$md-bg-prefix}-#{$name}-#{$color-name} {
-      background-color: #{$color-code};
+    .#{$md-css-prefix}-#{$md-bg-prefix}-#{$name} {
+      background-color: #{$group};
     }
   }
 }
