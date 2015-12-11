@@ -11,8 +11,8 @@
       color: #{$color-code};
     }
 
-    .#{$md-css-prefix}-#{$md-text-prefix}-#{$name}-#{$color-name} {
-      color: #{$color-code};
+    .#{$md-css-prefix}-#{$md-bg-prefix}-#{$name}-#{$color-name} {
+      background-color: #{$color-code};
     }
   }
 }
