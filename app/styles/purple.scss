@@ -1,5 +1,5 @@
 ////
-/// Main
+/// Purple
 ////
 
 
@@ -8,9 +8,4 @@
 @import 'functions/color';
 @import 'mixins/group';
 
-
-@each $group in $colors {
-  $group-name: nth($group, 1);
-
-  @include group($group-name);
-}
+@include group('purple');
