@@ -5,13 +5,16 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'app/styles',
-          src: ['*.scss'],
+          src: ['{,*/}*.scss'],
           dest: 'tmp/styles',
           ext: '.css'
         }]
       }
     },
     browserSync: {
+      options: {
+        background: true
+      },
       server: {
         options: {
           server: {
@@ -23,14 +26,22 @@ module.exports = function(grunt) {
           port: 9000
         }
       }
+    },
+    watch: {
+      sass: {
+        files: ['app/styles/{,*/}*.scss'],
+        tasks: ['sass:server']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', [
     'sass:server',
-    'browserSync:server'
+    'browserSync:server',
+    'watch'
   ]);
 };
