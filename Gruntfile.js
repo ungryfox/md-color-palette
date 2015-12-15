@@ -4,7 +4,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'app/styles',
+          cwd: 'src/styles',
           src: ['{,*/}*.scss'],
           dest: 'dist/styles',
           ext: '.css'
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       server: {
         files: [{
           expand: true,
-          cwd: 'app/styles',
+          cwd: 'src/styles',
           src: ['{,*/}*.scss'],
           dest: 'tmp/styles',
           ext: '.css'
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         options: {
           server: {
             baseDir: [
-              'app',
+              'docs',
               'tmp'
             ],
           },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     },
     watch: {
       sass: {
-        files: ['app/styles/{,*/}*.scss'],
+        files: ['src/styles/{,*/}*.scss'],
         tasks: ['sass:server']
       }
     }
