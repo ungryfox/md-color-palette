@@ -1,6 +1,6 @@
 {
   "name": "md-color-palette",
-  "description": "",
+  "description": "Complete package with all colors in palette of Material Design.",
   "main": "dist/styles/md-color-palette.css",
   "license": "MIT",
   "homepage": "https://github.com/ungryfox/md-color-palette",
