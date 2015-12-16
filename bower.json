@@ -1,7 +1,7 @@
 {
   "name": "md-color-palette",
   "description": "",
-  "main": "dist/styles/main.css",
+  "main": "dist/styles/md-color-palette.css",
   "license": "MIT",
   "homepage": "https://github.com/ungryfox/md-color-palette",
   "ignore": [
