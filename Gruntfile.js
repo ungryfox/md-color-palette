@@ -71,7 +71,5 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('default', [
-    'server'
-  ]);
+  grunt.registerTask('default', 'server');
 };
